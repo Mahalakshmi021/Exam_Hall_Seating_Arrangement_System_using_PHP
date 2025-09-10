@@ -1,0 +1,194 @@
+/* Reset some default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #2c3e50;
+}
+.container {
+    margin-left: 100px;
+    padding: 20px;
+    background-color: #f4f6f7;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    height: 100%;
+    position: fixed;
+    transition: 0.3s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar a i {
+    width: 30px;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    background-color: #3498db;
+    padding-left: 20px;
+}
+
+
+/* Title Bar */
+.title-bar {
+    margin-left: 260px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title-bar button {
+    background-color: white;
+    color: #2c3e50;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.title-bar button:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Form Container */
+form {
+    margin-left: 260px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin-top: 20px;
+}
+
+/* Form Heading */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #2c3e50;
+}
+
+/* Input Fields */
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #2c3e50;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+/* Placeholder text color */
+form input::placeholder {
+    color: #999;
+}
+
+/* Dropdown Styling */
+form select {
+    background-color: #fff;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+/* Error Messages */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Table Inputs Design */
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .title-bar {
+        margin-left: 0;
+    }
+
+    form {
+        margin-left: 0;
+        width: 90%;
+    }
+}

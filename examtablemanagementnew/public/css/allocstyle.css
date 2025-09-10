@@ -1,0 +1,124 @@
+
+        .sidebar {
+    width: 260px;
+    background: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    height: 100%;
+    position: fixed;
+    transition: 0.3s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar a i {
+    width: 30px;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    background-color: #3498db;
+    padding-left: 50px;
+}
+   .title-bar {
+     margin-left: 260px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                         background: #2c3e50;
+                        padding: 10px 20px;
+                        color: white;
+                    }
+                    .home-button {
+                        text-decoration: none;
+                        color: white;
+                        background-color: #ffffff;
+                        padding: 5px 15px;
+                        border-radius: 5px;
+                    }
+.content {
+            margin-left: 260px; /* Adjust based on sidebar width */
+            padding: 20px;
+             }
+ #countDept1, #countDept2 {
+        margin-left: 10px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+    text-align: center;
+    font-size: 25px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+        .seating-allocation-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .seating-allocation-table th, .seating-allocation-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .seating-allocation-table th {
+            background-color: #f0f0f0;
+        }
+        
+        .create-seating-allocation-form {
+            margin-top: 40px;
+        }
+        
+        .create-seating-allocation-form select, .create-seating-allocation-form input[type="text"], .create-seating-allocation-form input[type="number"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .create-seating-allocation-form input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .create-seating-allocation-form input[type="submit"]:hover {
+            background-color: #2c3e50;
+        }

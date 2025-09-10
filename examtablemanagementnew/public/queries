@@ -1,0 +1,50 @@
+
+
+//User Table
+
+CREATE TABLE user (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,  -- Stores hashed password
+    usertype ENUM('admin', 'user') NOT NULL DEFAULT 'user',  -- User type column
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+Insert User(PW = 123456)
+
+INSERT INTO user (username, password, usertype, created_at) VALUES
+('admin', '$2y$10$4DoHdKvDVESrNYj/WYI09esGM3XwszOryYm19/8.67FbfxQbO9KUu', 'admin', NOW()),
+('user1', '$2y$10$4DoHdKvDVESrNYj/WYI09esGM3XwszOryYm19/8.67FbfxQbO9KUu', 'user', NOW()),
+('user2', '$2y$10$4DoHdKvDVESrNYj/WYI09esGM3XwszOryYm19/8.67FbfxQbO9KUu', 'user', NOW());
+
+
+Create Student table
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT UNIQUE NOT NULL,  -- Mapping to users table
+    name VARCHAR(255) NOT NULL,
+    email_id VARCHAR(255) NOT NULL,
+    reg_number VARCHAR(50) UNIQUE NOT NULL,
+    department VARCHAR(100),
+    year VARCHAR(50),
+    course_code VARCHAR(50),
+    added_by VARCHAR(50),
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+CREATE TABLE block (block_id INT PRIMARY KEY AUTO_INCREMENT,
+                block_name VARCHAR(200) NOT NULL)
+
+
+//Create a department table
+
+CREATE TABLE department (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_name VARCHAR(255) NOT NULL,
+    block_id INT NOT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY (block_id) REFERENCES block(block_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id) -- Assuming you have a users table
+);
+
